@@ -82,3 +82,68 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.924
 !MESSAGE Could not send ACTION event 'showOnStartup': no analytics instance present.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:25.335
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:29.738
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:29.742
+!MESSAGE Boot project ADDED: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:29.746
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:30.009
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2026-02-16 19:20:30.162
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\VENKATA SIVAJI\Downloads\sts-4.25.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/VENKATA SIVAJI/Desktop/MicroServices/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1771249830148
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\Users\VENKATA SIVAJI\Downloads\sts-4.25.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.57.0.202409101848\servers\spring-boot-language-server\spring-boot-language-server-1.57.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:20:30.167
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2026-02-16 19:20:30.196
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 15816
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:21:35.333
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:21:35.336
+!MESSAGE Boot project REMOVED: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:31.783
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:31.785
+!MESSAGE Boot project ADDED: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:33.905
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:38.820
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:39.360
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:46.866
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:48.422
+!MESSAGE Classpath changed for project: accounts
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-02-16 19:22:59.289
+!MESSAGE Classpath changed for project: accounts
