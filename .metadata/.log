@@ -1,0 +1,84 @@
+!SESSION 2026-02-16 19:05:50.829 -----------------------------------------------
+eclipse.buildId=4.25.0.202409101855
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data C:\Users\VENKATA SIVAJI\Desktop\MicroServices
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-16 19:06:00.445
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-02-16 19:06:03.736
+!MESSAGE Logback config file: C:\Users\VENKATA SIVAJI\Desktop\MicroServices\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2026-02-16 19:06:04.876
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-16 19:06:04.876
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2026-02-16 19:06:05.681
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-16 19:06:05.681
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-16 19:06:16.400
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\VENKATA SIVAJI'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.635
+!MESSAGE Ignored property with key: null value: null
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.865
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.868
+!MESSAGE Could not send USER event 'Anonymous ID: a94b670f-5c00-420a-811f-c4d19612f158': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.871
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.873
+!MESSAGE Could not send STARTUP event 'startup': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.875
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.877
+!MESSAGE Could not send USER event 'Anonymous ID: a94b670f-5c00-420a-811f-c4d19612f158': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.879
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.881
+!MESSAGE Could not send ACTION event 'installed': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.894
+!MESSAGE Ignored property with key: null value: null
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.897
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.899
+!MESSAGE Could not send USER event 'Anonymous ID: a94b670f-5c00-420a-811f-c4d19612f158': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.906
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.908
+!MESSAGE Could not send STARTUP event 'startup': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.914
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.916
+!MESSAGE Could not send USER event 'Anonymous ID: a94b670f-5c00-420a-811f-c4d19612f158': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.922
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2026-02-16 19:06:18.924
+!MESSAGE Could not send ACTION event 'showOnStartup': no analytics instance present.
