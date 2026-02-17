@@ -1,10 +1,9 @@
-package com.mircorservices.account;
+package com.microservices.accounts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.microservices")
-
+@SpringBootApplication()
 public class AccountsApplication {
 
 	public static void main(String[] args) {
