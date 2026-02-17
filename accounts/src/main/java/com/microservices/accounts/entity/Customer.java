@@ -4,17 +4,25 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString @AllArgsConstructor @NoArgsConstructor
 public class Customer extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(insertable=false) 
+	@Column(name="customer_id") 
 	private long accountNumber;
 	
-	private Long customerId;
+	private String name;
 	
-	private String accountType;
+	private String mail;
 	
-	private String branchAddress;
+	private int mobileNumber;
 
 }
