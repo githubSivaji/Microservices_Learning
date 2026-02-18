@@ -20,8 +20,6 @@ import lombok.ToString;
 public class Accounts extends BaseEntity  {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(insertable=false) 
 	private Long accountNumber;
 	
 	private Long customerId;

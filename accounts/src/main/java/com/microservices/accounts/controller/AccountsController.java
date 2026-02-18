@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservices.accounts.constants.AccountsConstants;
 import com.microservices.accounts.dto.CustomerDTO;
 import com.microservices.accounts.dto.ResponseDTO;
+import com.microservices.accounts.services.IAccountsService;
+
+import lombok.AllArgsConstructor;
 
 @RestController
+@AllArgsConstructor 
 @RequestMapping(path="/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AccountsController {  
-
+    
+	private IAccountsService iAccountsService;
     @GetMapping
     public String sayHello() {
         return "hello-world";
@@ -24,6 +29,7 @@ public class AccountsController {
     
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO> createAccount(@RequestBody CustomerDTO customerDTO) {
+    	iAccountsService.createAccount(customerDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(new ResponseDTO(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));  
     }
