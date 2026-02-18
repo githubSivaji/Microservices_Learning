@@ -14,20 +14,18 @@ import com.microservices.accounts.dto.CustomerDTO;
 import com.microservices.accounts.dto.ResponseDTO;
 
 @RestController
-@RequestMapping(path="/api",produces= {MediaType.APPLICATION_JSON_VALUE})
-public class AccountsController {
-	
-	@GetMapping
-	public String sayHello()
-	{
-		return "hello-world";
-	}
-	
-     @PostMapping("/create")
-    public  ResponseEntity<ResponseDTO> createAccount(@RequestBody CustomerDTO customerDTO)
-   {
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(new ResponseDTO(AccountsConstants.STATUS_201,AccountsConstants.MESSAGE_201));  
+@RequestMapping(path="/api", produces = MediaType.APPLICATION_JSON_VALUE)
+public class AccountsController {  
+
+    @GetMapping
+    public String sayHello() {
+        return "hello-world";
+    }
+    
+    @PostMapping("/create")
+    public ResponseEntity<ResponseDTO> createAccount(@RequestBody CustomerDTO customerDTO) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(new ResponseDTO(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));  
     }
 
-}
+} 
