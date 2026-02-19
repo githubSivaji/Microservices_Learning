@@ -7,10 +7,13 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import com.microservices.accounts.constants.AccountsConstants;
+import com.microservices.accounts.dto.AccountsDTO;
 import com.microservices.accounts.dto.CustomerDTO;
 import com.microservices.accounts.entity.Accounts;
 import com.microservices.accounts.entity.Customer;
 import com.microservices.accounts.exception.CustomerAlreadyExistsException;
+import com.microservices.accounts.exception.ResourceNotFoundException;
+import com.microservices.accounts.mapper.AccountsMapper;
 import com.microservices.accounts.mapper.CustomerMapper;
 import com.microservices.accounts.repository.AccountsRepository;
 import com.microservices.accounts.repository.CustomerRepository;
@@ -49,6 +52,17 @@ public class AccountsServiceImpl implements IAccountsService  {
 		newAccount.setCreatedAt(LocalDateTime.now());
 		newAccount.setCreatedBy("Sivaji");
 		return newAccount;
+	}
+	@Override
+	public CustomerDTO fetchAccount(String mobileNumber) {
+		
+		Customer customer=customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
+				()->new ResourceNotFoundException("Customer","mobileNumber",mobileNumber));
+		Accounts accounts =accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(
+				()->new ResourceNotFoundException("Account","customerId",customer.getCustomerId().toString()));
+		CustomerDTO customerDTO=CustomerMapper.mapToCustomerDTO(customer, new CustomerDTO());
+		customerDTO.setAccountsDTO(AccountsMapper.mapToAccountsDto(accounts, new AccountsDTO()));
+		return customerDTO;
 	}
  
 }

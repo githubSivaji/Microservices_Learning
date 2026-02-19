@@ -5,5 +5,7 @@ import com.microservices.accounts.dto.CustomerDTO;
 public interface IAccountsService {
 	
 	void createAccount(CustomerDTO customerDTO); 
+	
+	CustomerDTO fetchAccount(String mobileNumber);
 
 }

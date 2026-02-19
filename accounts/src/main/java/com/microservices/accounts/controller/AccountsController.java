@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.microservices.accounts.constants.AccountsConstants;
@@ -32,6 +33,14 @@ public class AccountsController {
     	iAccountsService.createAccount(customerDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(new ResponseDTO(AccountsConstants.STATUS_201, AccountsConstants.MESSAGE_201));  
+    }
+    
+    @GetMapping("/fetch")
+    public ResponseEntity<CustomerDTO> fetchAccountDetails(@RequestParam String mobileNumber)
+    { 
+    	CustomerDTO customerDTO=iAccountsService.fetchAccount(mobileNumber);
+    	return ResponseEntity.status(HttpStatus.OK)
+                .body(customerDTO);  
     }
 
 } 
