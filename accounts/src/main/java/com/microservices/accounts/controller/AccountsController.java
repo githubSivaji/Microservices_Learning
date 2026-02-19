@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,6 +42,21 @@ public class AccountsController {
     	CustomerDTO customerDTO=iAccountsService.fetchAccount(mobileNumber);
     	return ResponseEntity.status(HttpStatus.OK)
                 .body(customerDTO);  
+    }
+    
+    @PutMapping("/update")
+    public ResponseEntity<ResponseDTO> updateAccountDetails(@RequestBody CustomerDTO customerDTO )
+    { 
+        boolean isUpdated=iAccountsService.updateAccount(customerDTO);
+        if(!isUpdated)
+        {
+        	return ResponseEntity.status(HttpStatus.OK)
+        			.body(new ResponseDTO(AccountsConstants.STATUS_200,AccountsConstants.MESSAGE_200));
+        }
+        	return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+        			.body(new ResponseDTO(AccountsConstants.MESSAGE_500,AccountsConstants.MESSAGE_500));
+        
+ 
     }
 
 } 
