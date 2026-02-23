@@ -18,6 +18,9 @@ import com.microservices.accounts.dto.CustomerDTO;
 import com.microservices.accounts.dto.ResponseDTO;
 import com.microservices.accounts.services.IAccountsService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -25,15 +28,24 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping(path="/api", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor 
-@Validated 
+@Validated
+@Tag(
+		name ="CRUD REST API's for Accounts in Bank",
+		description="CRUD REST API's for Accounts in Bank to CREATE , UPDATE, FETCH, AND DELETE account details"
+		)
 public class AccountsController {  
     
 	private IAccountsService iAccountsService;
+	
     @GetMapping
     public String sayHello() {
         return "hello-world";
     }   
     
+    @Operation(
+    		summary="Create Account REST API",
+    		description="REST API to create new customer & Account inside bank"
+    		)
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO> createAccount(@Valid @RequestBody CustomerDTO customerDTO) {
     	iAccountsService.createAccount(customerDTO);
@@ -50,7 +62,14 @@ public class AccountsController {
     	return ResponseEntity.status(HttpStatus.OK)
                 .body(customerDTO);  
     }
-    
+    @Operation(
+    		summary="update  Account REST API",
+    		description="REST API to update  customer & Account inside bank"
+    		)
+    @ApiResponse(
+    		responseCode="201",
+    		description="HTTPS status CREATED"
+    		)
     @PutMapping("/update")
     public ResponseEntity<ResponseDTO> updateAccountDetails(@Valid @RequestBody CustomerDTO customerDTO )
     { 
