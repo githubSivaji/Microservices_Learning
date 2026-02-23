@@ -55,7 +55,7 @@ public class AccountsController {
     public ResponseEntity<ResponseDTO> updateAccountDetails(@Valid @RequestBody CustomerDTO customerDTO )
     { 
         boolean isUpdated=iAccountsService.updateAccount(customerDTO);
-        if(!isUpdated)
+        if(isUpdated)
         {
         	return ResponseEntity.status(HttpStatus.OK)
         			.body(new ResponseDTO(AccountsConstants.STATUS_200,AccountsConstants.MESSAGE_200));
