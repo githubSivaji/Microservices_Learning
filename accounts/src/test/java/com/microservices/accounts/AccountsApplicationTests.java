@@ -1,4 +1,4 @@
-package com.mircorservices.account;
+package com.microservices.accounts;  
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
